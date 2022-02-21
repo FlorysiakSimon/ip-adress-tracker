@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
+  z-index: 999;
+  background-image: url("../public/images/pattern-bg.png");
+  height: 240px;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
+  position: relative;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h1 {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
-  to {
-    transform: rotate(360deg);
+  input {
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    width: 400px;
+    height: 20px;
+    padding: 12px;
+    &:focus {
+      outline: none;
+    }
+    &::content {
+      padding: 12px;
+    }
+    &::placeholder {
+      padding: 12px;
+      color: var(--dark-gray);
+      font-weight: 700;
+    }
+  }
+  div {
+    margin: 0 auto;
+    display: flex;
+    width: 85%;
+    justify-content: center;
+    button {
+      width: 40px;
+      border: none;
+      border-radius: 0px 5px 5px 0px;
+      background-color: black;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--dark-gray);
+      }
+      img {
+        width: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 510px) {
+  section {
+    input {
+      width: 100%;
+    }
   }
 }

@@ -27,9 +27,10 @@ Users should be able to:
 
 - [react](https://reactjs.org/)
 - [typescript](https://www.typescriptlang.org/)
+- [axios](https://github.com/axios/axios)
 - [sass](https://sass-lang.com/)
 - [IP Geolocation API](https://geo.ipify.org/)
-
+- [react-leaflet](https://react-leaflet.js.org/)
 
 ## Installation
 
