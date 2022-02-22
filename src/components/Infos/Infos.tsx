@@ -16,7 +16,8 @@ export const Infos:React.FC<Props> = ({item}) => {
             </div>
             <div>
                 <h3>Location</h3>
-                <p>{item.location.city},{item.location.postalCode}</p>
+                <p>{item.location.city},{item.location.postalCode}<br />
+                {item.location.region},{item.location.country}</p>
             </div>
             <div>
                 <h3>Timezone</h3>

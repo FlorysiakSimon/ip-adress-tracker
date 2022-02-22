@@ -2,14 +2,16 @@ import React from 'react';
 import './App.scss';
 //components
 import { Infos } from './components/Infos/Infos';
-import { Map } from './components/Map/Map';
+import Map from './components/Map/Map';
 //services
 import { getInfos } from './services/data';
 
 type Location ={
   city:string;
+  country:string;
   postalCode:number;
   timezone:number;
+  region:string;
   lat:number;
   lng:number;
 }
@@ -27,6 +29,8 @@ function App() {
   const [data,setData] = React.useState<IpItemType | undefined>()
   const [position,setPosition] = React.useState<Array<number | string | undefined>>([])
   const [ip,setIp] = React.useState<number | string | undefined>('')
+
+
   //handle input
   const [inputValue,setInputValue] = React.useState<string | number | undefined>(undefined)
   
@@ -41,20 +45,14 @@ function App() {
   React.useEffect(() => {
 		const getData = async () => {
 			const request = await getInfos(ip);
-			if (!request) return alert('data error');
+			if (!request) return alert('Please enter a valid ip address !');
 			setData(request);
       setPosition([request.location.lat,request.location.lng])
 		};
 		getData();
-    
 	}, [ip]);
 	if (!data) return null;
 
-  
-  console.log(data);
-
-  console.log(position);
-  
   return (
     <>
       <section>
@@ -66,7 +64,7 @@ function App() {
       <Infos item={data}/>
       </section>
       <div>
-        <Map item={data} map={position} />
+        <Map position={position} item={data} />
       </div>
     </>
   );
