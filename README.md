@@ -17,7 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [netlify]()
+The website won't work if you're using anti-tracker
+- Live Site URL: [netlify](https://ip-tracker-address-sf.netlify.app/)
 
 ## Prerequisites
 
