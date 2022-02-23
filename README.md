@@ -1,4 +1,4 @@
-# Frontend Mentor - REST Countries API with color theme switcher solution
+# Frontend Mentor - IP Address Tracker
 
 This is a solution to the [IP Address Tracker challenge](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0/hub/ip-address-tracker-8CXta-Q_l). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
